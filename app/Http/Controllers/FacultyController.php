@@ -22,7 +22,7 @@ class FacultyController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

@@ -1,3 +1,4 @@
+<a href="{{ route('prodis.index') }}">Data Prodi</a>
 <h1>Data Prodi</h1>
 
 <table>

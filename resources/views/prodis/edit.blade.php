@@ -1,4 +1,4 @@
-<h1>Tambah Prodi</h1>
+<h1>Edit Data Prodi</h1>
 
 <a href="{{ route('prodis.index') }}">Kembali</a>
 </div>
@@ -28,7 +28,7 @@
         <label for="faculty">Fakultas</label>
         <select name="faculty_id" id="">
             @foreach ($faculties as $faculty)
-            <option value="{{ $faculty->id }}" @if (old('fuculty_id', $prodi->faculty_id)) selected @endif>
+            <option value="{{ $faculty->id }}" @if (old('faculty_id', $prodi->faculty_id)) selected @endif>
                 {{ $faculty->faculty_name }}
             </option>
             @endforeach

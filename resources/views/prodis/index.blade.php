@@ -1,8 +1,8 @@
-
+<center>
 
 <h1>Daftar Prodi</h1>
-
-<a href="{{ route('prodis.create') }}">Tambah</a>
+<a href="{{ route('faculties.index') }}">Data Fakultas</a><br><br>
+<a href="{{ route('prodis.create') }}" style="text-decoration: none; color:green;">+Tambah</a>
 @if (session()->has('pesan'))
     <div style="color: green;">
         {{ session()->get('pesan') }}
@@ -24,12 +24,12 @@
                         @foreach ($prodis as $prodi)
                             <tr>
                                 <th >{{ $i }}</th>
-                                <td><a href="{{ route('prodis.show', $prodi->id) }}">{{ $prodi->prodi_name }}</a></td>
+                                <td><a href="{{ route('prodis.show', $prodi->id) }}" style="text-decoration: none; color:rgb(216, 0, 0);">{{ $prodi->prodi_name }}</a></td>
                                 <td>{{ $prodi->prodi_code }}</td>
                                 <td>{{ $prodi->faculty->faculty_name }}</td>
                                 <td>
                                     <a href="{{ route('prodis.edit', $prodi->id) }}"><button>Edit</button></a>
-                                    <form action="{{ route('prodis.destroy', $prodi->id) }}" method="post">
+                                    <form action="{{ route('prodis.destroy', $prodi->id) }}" method="post" style="display:inline-block;">
                                         @csrf
                                         @method('DELETE')
                             
@@ -42,4 +42,5 @@
                         @endforeach
                     </tbody>
                 </table>
+            </center>
            

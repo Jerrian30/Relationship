@@ -1,5 +1,7 @@
 
-            <h1>Tambah Prodi</h1>
+@extends('layouts.main')
+@section('content')
+   <h1>Tambah Prodi</h1>
 
             <a href="{{ route('prodis.index') }}" class="btn btn-primary btn-rounded btn-sm btn-30">Kembali</a>
 
@@ -49,4 +51,5 @@
            
         </form>
 
+    @endsection
 

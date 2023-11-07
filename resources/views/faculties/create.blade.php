@@ -1,4 +1,5 @@
-
+@extends('layouts.main')
+@section('content')
 <h1>Tambah Fakultas</h1>
 
 <a href="{{ route('faculties.index') }}" class="btn btn-primary btn-rounded btn-sm btn-30">Kembali</a>
@@ -48,5 +49,6 @@
     </div>
 
 </form>
+@endsection
 
 

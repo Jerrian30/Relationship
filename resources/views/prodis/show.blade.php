@@ -1,5 +1,7 @@
+@extends('layouts.main')
+@section('content')
 <a href="{{ route('prodis.index') }}">Data Prodi</a>
-<h1>Data Prodi</h1>
+<h1>Data Prodi {{  $prodi->prodi_name }}</h1>
 
 <table>
     <tr>
@@ -15,3 +17,4 @@
         <td>: {{ $prodi->faculty->faculty_name }}</td>
     </tr>
 </table>
+@endsection

@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <h1>Edit Data Prodi</h1>
 
 <a href="{{ route('prodis.index') }}">Kembali</a>
@@ -43,4 +45,4 @@
         <input type="submit" value="Simpan">
     </div>
 </form>
-
+@endsection

@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <h1>Edit Data faculty</h1>
 
 <a href="{{ route('faculties.index') }}">Kembali</a>
@@ -31,3 +33,4 @@
     </div>
 </form>
 
+@endsection

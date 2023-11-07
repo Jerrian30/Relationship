@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <a href="{{ route('faculties.index') }}">Data Fakultas</a>
 <h1>Data Fakultas</h1>
 
@@ -11,3 +13,4 @@
         <td>: {{ $faculty->faculty_code }}</td>
     </tr>
 </table>
+@endsection

@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\FacultyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\FacultyController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,29 @@ use App\Http\Controllers\ProdiController;
 */
 
 Route::get('/', function () {
-    return view('/layouts.main');
+    return view('welcome');
 });
-Route::resource('/prodis', ProdiController::class);
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('/faculties', FacultyController::class);
+Route::middleware('auth')->group(function () {
+    
+});
+
+Route::middleware('role:admin')->group(function () {
+    Route::get('/halamana');
+});
+
+Route::middleware('role:user')->group(function () {
+    //semua route untuk user disini
+});
+
+Route::middleware('role:petugas')->group(function () {
+    //semua route untuk petugas disini
+});
+
+Route::resource('faculties', FacultyController::class);
+Route::resource('prodis', ProdiController::class);
+require __DIR__.'/auth.php';

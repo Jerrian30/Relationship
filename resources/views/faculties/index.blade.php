@@ -3,18 +3,15 @@
 <center>
 <h1>Daftar Fakultas</h1>
 <a href="{{ route('prodis.index') }}">Data Prodi</a><br><br>
-<a href="{{ route('faculties.create') }} " style="text-decoration: none;color:green;">+Tambah</a>
+<a href="{{ route('faculties.create') }} " style="text-decoration: none;"><button style="background-color: rgb(87, 205, 87);border-radius:30px;color:rgb(8, 13, 24);">+Tambah</button></a>
 @if (session()->has('pesan'))
-    <div style="color: green;">
+    <div style="color: green;text-align:center">
         {{ session()->get('pesan') }}
     </div>
     <br>
 @endif
 <table border="1" cellpadding="5" cellspacing="0">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-        </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

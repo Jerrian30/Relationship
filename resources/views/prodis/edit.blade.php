@@ -3,7 +3,7 @@
 <h1>Edit Data Prodi</h1>
 
 <a href="{{ route('prodis.index') }}">Kembali</a>
-</div>
+
 
 <form action="{{ route('prodis.update', $prodi->id) }}" method="POST">
     @csrf

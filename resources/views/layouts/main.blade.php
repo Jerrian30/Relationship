@@ -12,12 +12,12 @@
 
             <!-- Main Content -->
             <div id="content">
-
-                @yield('content')
+                <div class="container">
+                    @yield('content')
+                </div>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
 
                 </div>
                 <!-- /.container-fluid -->
@@ -25,7 +25,7 @@
             </div>
             <!-- End of Main Content -->
 
-          @includeIf('partials.footer')
+        @includeIf('partials.footer')
 
 </body>
 

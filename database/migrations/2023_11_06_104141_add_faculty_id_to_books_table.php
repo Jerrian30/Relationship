@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Faculty;
 
 return new class extends Migration
 {
@@ -13,7 +14,7 @@ return new class extends Migration
     {
         //buat kolom faculty_id 
         Schema::table('prodis', function (Blueprint $table) {
-            $table->foreignIdFor(App\Models\Faculty::class)
+            $table->foreignIdFor(Faculty::class)
             ->nullable()
             ->after('id')
             ->references('id')

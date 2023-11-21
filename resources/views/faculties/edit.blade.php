@@ -3,7 +3,7 @@
 <h1>Edit Data faculty</h1>
 
 <a href="{{ route('faculties.index') }}">Kembali</a>
-</div>
+
 
 <form action="{{ route('faculties.update', $faculty->id) }}" method="POST">
     @csrf
